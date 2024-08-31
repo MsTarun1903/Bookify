@@ -1,0 +1,25 @@
+{
+  "name": "capstone-project-databases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "echo \"Error: no build specified\" && exit 1"
+  },
+  "author": "Tarun MS",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

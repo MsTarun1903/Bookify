@@ -1,0 +1,120 @@
+/* Main script for the  Main File */
+/* There was a major involvement of Co-pilot also  in this file.*/
+
+
+html{
+    background-color: #D1BB9E;
+    margin: 0;
+    padding: 0;
+}
+
+.top-container{
+    background-color: #FFF2E1;
+    height: 50px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #333;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin-bottom: -10px; /* Negative value of footer height */
+    margin-top: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%; 
+    margin: 0 auto;
+}
+
+select {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 45%;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#btnSort{
+    margin-top: 16px;
+    border-radius: 10px;
+    color:#B5C18E;
+    background-color: #4b5251;
+    width: 120px;
+    height: 50px;
+}
+
+#btnSort:hover{
+    background-color:rgb(0, 9, 9);
+    color:white;
+    transition: all ease-in-out 0.3s;
+}
+
+.container div {
+    /* Styles for each book */
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    /* Styles for the book title */
+    font-size: 20px;
+    color: #333;
+}
+
+.container p {
+    /* Styles for the book details */
+    font-size: 20px;
+    color: #666;
+}
+
+.container img {
+    /* Styles for the book cover */
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.container a {
+    /* Styles for the view link */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.book{
+    position: relative;
+}
+
+.button-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 50px; /* Set the height of your footer */
+}
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= book.title %></title>
+</head>
+<body>
+    <%# This is the separate script for viewing the  details of a single book %>
+    <h1><%= book.title %></h1>
+    <p id="author"><%= book.author %></p>
+    <div id="book-container">
+        <img src="<%= book.cover %>" alt="Book cover for <%= book.title %>">
+        <div id="details">
+            <p id="desc"><%= book.description %></p>
+            <p id="price">Price: <%= book.price %></p>
+            <p id="rating">Rating: <%= book.rating %></p>
+            <p id="date">Published Date: <%= new Date(book.publish_date).toLocaleDateString('en-US') %></p>
+        </div>
+    </div>
+</body>
+<%# I was not able to link the style sheet so i wrote it in the same file itself, i'll figure it out later. %>
+<style>
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color:cadetblue;
+    }
+
+    #book-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        color: #333;
+        margin-top: 20px;
+        font-size: 50px;
+    }
+
+    p {
+        color: #666;
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    #author{
+        color: white;
+    }
+</style>
+</html>

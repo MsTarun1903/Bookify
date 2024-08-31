@@ -1,0 +1,43 @@
+<%# Inclusion of the Header file in the main Script %>
+<%- include("partials/header.ejs"); -%>
+<div class="top-container">
+    <h1>Welcome to Bookify</h1>
+</div>
+
+<%# This is a container to handle the /sort route (Action is added.) %>
+
+<div class="container">
+    <form action="/sort" method="POST">
+        <select id="options" name="options">
+            <option value="" disabled selected>Order By</option>
+            <option value="option1">Date</option>
+            <option value="option2">Rating</option>
+            <option value="option3">Price</option>
+        </select>
+        <button type="submit" id="btnSort">Sort by option</button>
+    </form>
+</div>
+
+
+<%# This is another container in which all of the books info will be displayed and the information to be displayed as well %>
+<div class="container">
+    <% books.forEach((book) => { %>
+        <div class="book">
+            <h2><%= book.title %></h2>
+            <p>Author: <%= book.author %></p>
+            <img src="<%= book.cover %>" alt="<%= book.title %> Cover">
+            <% let date = new Date(book.publish_date) %>
+            <p>Published: <%= `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` %></p>
+            <p>Rating: <%= book.rating %>/5</p>
+            <p>Price: <%= book.price %>$</p>
+            <p>Description: <%= book.description %></p>
+            <a href="/book/<%= book.id %>"><span>View More About </span><%= book.title %></a>
+            <div class="button-container">
+                <a href="/edit/<%= book.id %>">Edit</a> 
+                <a href="/delete/<%= book.id %>">Delete</a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+<%# This is the inclusion of the Footer file in the main script %>
+<%- include("partials/footer.ejs") %>
